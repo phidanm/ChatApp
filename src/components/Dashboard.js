@@ -4,7 +4,7 @@ import Chat from "./Chat";
 import { db, auth } from "../firebase";
 
 function Dashboard() {
-  const scroll=useRef()
+  const scroll = useRef();
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function Dashboard() {
         ))}
       </div>
 
-      <Chat scroll={scroll}/>
+      <Chat scroll={scroll} />
       <div ref={scroll}></div>
       <Logout />
     </>

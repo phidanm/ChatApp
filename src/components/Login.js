@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import {Link, useHistory} from 'react-router-dom'
+import { Link, useHistory } from "react-router-dom";
 
 function Login() {
   const emailRef = useRef();
@@ -9,7 +9,7 @@ function Login() {
   const { login } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const history = useHistory()
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,7 +17,7 @@ function Login() {
       setError("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
-      history.push("/dashboard")
+      history.push("/dashboard");
     } catch {
       setError("Failed to sign in");
     }
@@ -44,7 +44,7 @@ function Login() {
               ></Form.Control>
             </Form.Group>
             <Button type="submit" className="w-100 mt-3" disabled={loading}>
-             Log In
+              Log In
             </Button>
           </Form>
         </Card.Body>

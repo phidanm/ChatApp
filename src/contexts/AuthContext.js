@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
     currentUser,
     signup,
     login,
-    logout
+    logout,
   };
 
   return (

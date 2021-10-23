@@ -1,9 +1,9 @@
 import { Button } from "react-bootstrap";
-import {useHistory } from "react-router-dom";
-import React from 'react';
+import { useHistory } from "react-router-dom";
+import React from "react";
 
 function Start() {
-    const history = useHistory();
+  const history = useHistory();
   function handleSignup() {
     history.push("/signup");
   }
